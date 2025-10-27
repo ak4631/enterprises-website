@@ -1,836 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Enterprises</title>
-<style>
-  /* Top bar*/
-    .topbar {
-  background:white; /* green background */
-  color:black;
-  font-size: 25px;
-  padding:10px 16px;
-  display: flex;                 /* left-right layout */
-  justify-content: space-between;/* left info & right info opposite sides */
-    height: 45px;
-    line-height: 20px;
-    overflow: hidden;
-    position: sticky;
-   
-}
-.topbar .logo1 img{
-  height: 120%;
-  width: 120%;
-  padding-right:50%;
-  text-align:center;
-  padding-top:0%;
-  }
-  .topbar .text h1{
-    font-size: 100%;
-    margin: 0;
-    padding-top: 5%;
-    
+    <title>Harsh Enterprises - Your Trusted Real Estate Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  }
-    .topbar .text p{
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-    font-size: 14px;
-    margin: 0%;
-    text-align: center;
-  }
-.topbar .right-info a {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-  color:  rgb(27, 27, 27);
-  text-decoration: none;                                                                                                                                                                                                                                                                                                                                                                            
-  margin-left: 20px; /* gap between links */
-  text-align: center;
-  height:10%;
-}
-.topbar .right-info a:hover {                                                           
-  text-decoration: underline; /* hover effect */
-  text-align: center;
-  padding: 1%;
-}  
-/* Header */
- header {
-            background-color:rgb(248, 253, 253);
-            color: rgb(3, 3, 3);
-            text-decoration:none;
-            /*padding: 0px 5px;*/
-            text-align: center;       
-            padding:5px;
+        /* Topbar */
+        .topbar {
+            background: linear-gradient(135deg, #393d52 0%, #9368be 100%);
+            color: white;
+            padding: 12px 5%;
             display: flex;
-           /* justify-content: space-between;*/
+            justify-content: space-between;
             align-items: center;
-            position:relative;
-            gap:5%;
-           padding-left: 20%;
-           position: sticky;
-    
-        }
-        
-/* Section first*/
-.hero-section {
-  background-color:#030303;
-  background-image: url('HE Logo.jpeg');  /* तुझ्या image चं नाव */
-  background-size: 600px;      /* पूर्ण section भरून दिसेल */
-  background-position: center; /* image center ला येईल */
-  background-repeat: no-repeat;/* repeat होणार नाही */
-  height: 600px;               /* section ची उंची */
-  display: flex;               /* text center करायला */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color:rgb(247, 243, 243);                /* text दिसायला white */
-  text-align: center;
-  font-size:25px;
-}
-.my-section{
-  padding: 50px;
-  text-align: center;
-  background-color: #f3f0f0;
-}
-.my-button{
-background-color: #f4f7fa;
-color:#111111;
-border:none;
-padding: 12px 25 px;
-font-size: 16px;
-border-radius: 8px;
-cursor:pointer;
-transition: background-color 0.3s,transform 2.2s;
-}
-.my-button:hover{
-  background-color: #007bff;
-  transform: scale(1.05);
-}
-/*section part 2*/
-.t {
-         padding: 60px 20px;
-            background: #f3f0f0;
-             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
-    .section {
-      width: 90%;
-      max-width: 1200px;
-      margin: 40px auto;
-    }
+        .topbar .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    /* Section Header */
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+        .topbar .logo1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    .section-header h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #fff;
-      margin: 0;
-    }
+        .topbar .logo1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .section-header p {
-      font-size: 14px;
-      color: #bbb;
-      margin: 5px 0 0;
-    }
+        .topbar .text h1 {
+            font-size: 22px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-    .view-all {
-      color: #3b82f6;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
-      transition: color 0.2s;
-    }
+        .topbar .text p {
+            font-size: 13px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
 
-    .view-all:hover {
-      color: #60a5fa;
-    }
+        .topbar .right-info {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
 
-    /* Property Cards */
-    .property-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 25px;
-    }
+        .topbar .right-info a {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
 
-    .card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #2a2a2a;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+        .topbar .right-info a:hover {
+            background: white;
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    }
+        .topbar .right-info a i {
+            color: white;
+            font-size: 18px;
+        }
 
-    .image-container {
-      position: relative;
-      height: 200px;
-      overflow: hidden;
-    }
+        .topbar .right-info a:hover i {
+            color: #667eea;
+        }
 
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+        /* Navigation */
+        header {
+            background: white;
+            padding: 15px 5%;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 74px;
+            z-index: 999;
+        }
 
-    .status {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #22c55e;
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
 
-    .details {
-      padding: 15px 20px;
-    }
+        header nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-    .details h3 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-    }
+        header nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
 
-    .builder {
-      font-size: 13px;
-      color: #3b82f6;
-      margin-top: 3px;
-    }
+        header nav a:hover {
+            color: #667eea;
+        }
 
-    .features {
-      font-size: 13px;
-      color: #aaa;
-      margin-top: 8px;
-      line-height: 1.4;
-    }
+        header nav a:hover::after {
+            width: 80%;
+        }
 
-    .price {
-      margin-top: 10px;
-      font-weight: 600;
-      font-size: 16px;
-      color: #e5e7eb;
-    }
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                url('Building.jpeg') center/cover; */
+            background: linear-gradient(135deg, rgb(75 39 87 / 90%) 0%, rgba(118, 75, 162, 0.9) 100%), url(Building.jpeg) center / cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
 
-    .tags {
-      margin-top: 10px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
 
-    .tag {
-      background: #2d2d2d;
-      color: #bbb;
-      font-size: 12px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      border: 1px solid #333;
-    }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
 
-    /* Divider between sections */
-    .divider {
-      height: 1px;
-      background: #2a2a2a;
-      margin: 50px 0 0;
-    }
-  /* Cards row */
-  .cards{
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:var(--gap);
-    align-items:start;
-  }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-/*About us*/
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .hero-section h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
 
-    .about-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 10%;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+        .hero-section .subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    .about-text {
-      flex: 1;
-      min-width: 300px;
-    }
+        .hero-section .tagline {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
 
-    .about-text h2 {
-      font-size: 32px;
-      color: #222;
-      margin-bottom: 15px;
-    }
+        .my-button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 16px 45px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .about-text p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 25px;
-    }
+        .my-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
 
-    .about-text a {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            padding: 80px 20px 20px;
+            background: #f8f9fa;
+        }
 
-    .about-text a:hover {
-      background-color: #0056b3;
-    }
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
 
-    .about-image {
-      flex: 1;
-      text-align: right;
-      min-width: 300px;
-    }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
 
-    .about-image img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+        .section-title p {
+            font-size: 16px;
+            color: #666;
+            max-width: 700px;
+            margin: 25px auto 0;
+            line-height: 1.8;
+        }
 
-    @media (max-width: 768px) {
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-image {
-        text-align: center;
-      }
-    }
-</style>
+        /* Property Section */
+        .property-section {
+            padding: 60px 5% 80px;
+            background: #f8f9fa;
+        }
+
+        .property-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
+        }
+
+        .image-container {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .image-container img {
+            transform: scale(1.1);
+        }
+
+        .status {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .details {
+            padding: 25px;
+        }
+
+        .details h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .builder {
+            font-size: 13px;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .features {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 800;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: #666;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 5%;
+            gap: 60px;
+            background: white;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .about-text a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .about-text a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-section h1 {
+                font-size: 42px;
+            }
+
+            .section-title h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .topbar .logo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header {
+                top: 140px;
+            }
+
+            header nav {
+                gap: 15px;
+            }
+
+            header nav a {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .hero-section {
+                height: 80vh;
+            }
+
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .hero-section .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-section .tagline {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .property-list {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .about-section {
+                flex-direction: column;
+                padding: 60px 5%;
+                text-align: center;
+            }
+
+            .about-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topbar .right-info a {
+                width: 30px;
+                height: 30px;
+            }
+
+            .topbar .right-info a i {
+                font-size: 14px;
+            }
+        }
+         /* ---------- [About Section] ---------- */
+        .about-section { display: flex; align-items: center; justify-content: space-between; padding: 100px 5%; gap: 50px; background: white; }
+        .about-text { flex: 1; }
+        .about-text h2 { font-size: 42px; margin-bottom: 20px; }
+        .about-text p { color: #666; line-height: 1.8; margin-bottom: 25px; }
+        .about-text a { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .about-text a:hover { opacity: 0.9; }
+        .about-image { flex: 1; }
+        .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+
+        /* ---------- [Contact Section] ---------- */
+        .contact-section { background: linear-gradient(135deg, #667eea, #764ba2); color: white; text-align: center; padding: 80px 20px; }
+        .contact-section h2 { font-size: 38px; margin-bottom: 10px; }
+        .contact-section p { font-size: 16px; margin-bottom: 10px; opacity: 0.9; }
+        .contact-info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .contact-info div { background: rgba(255,255,255,0.15); padding: 20px 30px; border-radius: 15px; min-width: 250px; }
+        .contact-info i { font-size: 22px; margin-bottom: 10px; }
+
+        /* ---------- [Footer] ---------- */
+        footer { background: #222; color: #ccc; text-align: center; padding: 30px 20px; font-size: 14px; }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ---------- [Responsive] ---------- */
+        @media (max-width: 768px) {
+            .about-section { flex-direction: column; text-align: center; }
+            .hero-section h1 { font-size: 38px; }
+        }
+    </style>
 </head>
+
+<body>
+    <div class="topbar">
+        <div class="logo-section">
+            <div class="logo1">
+                <img src="HE Logo.jpeg" alt="Harsh Enterprises Logo">
+            </div>
+            <div class="text">
+                <h1>Harsh Enterprises</h1>
+                <p>Trusted Real Estate Partners</p>
+            </div>
+        </div>
+        <div class="right-info">
+            <a href="https://www.facebook.com/share/15KzAWXG4Lb/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/harshenterprises.7979?igsh=MW8wdmYxZTlxMDE1cQ==" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9320658734" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@HARSHENTERPRISES-z4y" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://maps.app.goo.gl/BYBpLRZqZDM6XDKi6" title="Location"><i
+                    class="fas fa-map-marker-alt"></i></a>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#ready-to-move">Ready to Move</a>
+            <a href="#top-highlighted">Top Highlighted</a>
+            <a href="#recommended">Recommended</a>
+            <a href="#trusted">Trusted</a>
+            <a href="#high-demand">High Demand</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>HARSH ENTERPRISES</h1>
+            <p class="subtitle">Your Trusted Real Estate Partner</p>
+            <p class="tagline">Discover 63K+ Verified Properties In Thane With 7K+ New Listings Every Day. Find Your
+                Dream Home Today!</p>
+            <button class="my-button">Get Free Consultation</button>
+        </div>
+    </section>
+
+    <div id="ready-to-move" class="section-title">
+        <h2>Ready to Move</h2>
+        <p>Immediate possession available properties with all amenities and ready for occupancy</p>
+    </div>
+
+    <section class="property-section">
+        <div class="property-list">
+            <div class="card">
+                <div class="image-container">
+                    <img src="Shiv Shakti Heights" alt="Palm Hills">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Palm Hills</h3>
+                    <div class="builder">by Harsh Enterprises</div>
+                    <div class="features">2, 3 BHK Row House Villas<br>Between Igatpuri and Nashik</div>
+                    <div class="price">₹80 L - 98 L</div>
+                    <div class="tags">
+                        <span class="tag">Highway Touch</span>
+                        <span class="tag">Vacation Rental Income</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Navkar Residency" alt="Ambar Vasatu">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Ambar Vasatu</h3>
+                    <div class="builder">by Ambar Vaastu</div>
+                    <div class="features">1, 2, 3, 4 BHK Apartments<br>Badlapur East</div>
+                    <div class="price">₹35.99 L - 84.99 L</div>
+                    <div class="tags">
+                        <span class="tag">10–14 Floor Buildings</span>
+                        <span class="tag">Green Nature View</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Dream City" alt="Unimont Aurum">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Dream City</h3>
+                    <div class="builder">by Dream Homes</div>
+                    <div class="features">1, 2 BHK Apartments<br>Karjat</div>
+                    <div class="price">₹22 L - 33 L</div>
+                    <div class="tags">
+                        <span class="tag">4 Towers OC Received</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"
+                        alt="Shivshakti Prime">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Shivshakti Prime</h3>
+                    <div class="builder">by Shivshakti Builders</div>
+                    <div class="features">1, 2, 3, 4 BHK Apartments & Shops<br>2 mins from Badlapur Station</div>
+                    <div class="price">₹35.99 L - 84.99 L</div>
+                    <div class="tags">
+                        <span class="tag">Walking to Station</span>
+                        <span class="tag">Luxurious Lifestyle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Mohan Willows" alt="Mohan Willows">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Mohan Willows</h3>
+                    <div class="builder">by Mohan Group</div>
+                    <div class="features">1, 2 BHK Apartments<br>Badlapur East</div>
+                    <div class="price">₹28.62 L - 40.79 L</div>
+                    <div class="tags">
+                        <span class="tag">40,000 sqft Clubhouse</span>
+                        <span class="tag">Tallest in Badlapur</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Tharwani Ariana" alt="Tharwani Ariana">
+                    <div class="status">Ready to Move</div>
+                </div>
+                <div class="details">
+                    <h3>Tharwani Ariana</h3>
+                    <div class="builder">by Tharwani Group</div>
+                    <div class="features">1, 2 BHK Apartments<br>Badlapur West</div>
+                    <div class="price">₹32 L - 45 L</div>
+                    <div class="tags">
+                        <span class="tag">16 Storey Towers</span>
+                        <span class="tag">35+ Completed Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="top-highlighted" class="section-title">
+        <h2>Top Highlighted Projects</h2>
+        <p>Premium and exclusive property selections with unique features and amenities</p>
+    </div>
+
+    <section class="property-section">
+        <div class="property-list">
+            <div class="card">
+                <div class="image-container">
+                    <img src="Luxury Towers" alt="Luxury Towers">
+                    <div class="status">Premium</div>
+                </div>
+                <div class="details">
+                    <h3>Luxury Towers</h3>
+                    <div class="builder">by Premium Developers</div>
+                    <div class="features">3, 4 BHK Apartments<br>Powai, Mumbai</div>
+                    <div class="price">₹2.5 Cr - 5 Cr</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Business Hub" alt="Business Hub">
+                    <div class="status">Commercial</div>
+                </div>
+                <div class="details">
+                    <h3>Business Hub</h3>
+                    <div class="builder">by Corporate Builders</div>
+                    <div class="features">Commercial Spaces<br>Bandra Kurla Complex</div>
+                    <div class="price">₹3 Cr - 8 Cr</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Tech Park Residency"
+                        alt="Tech Park Residency">
+                    <div class="status">IT Corridor</div>
+                </div>
+                <div class="details">
+                    <h3>Tech Park Residency</h3>
+                    <div class="builder">by IT Zone Developers</div>
+                    <div class="features">2, 3 BHK Apartments<br>Hinjewadi, Pune</div>
+                    <div class="price">₹99 L - 2.1 Cr</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="recommended" class="section-title">
+        <h2>Recommended Projects</h2>
+        <p>Handpicked homes specially recommended for you by our expert team</p>
+    </div>
+
+    <section class="property-section">
+        <div class="property-list">
+            <div class="card">
+                <div class="image-container">
+                    <img src="Harsh Heights" alt="Harsh Heights">
+                </div>
+                <div class="details">
+                    <h3>Harsh Heights</h3>
+                    <div class="builder">by Harsh Enterprises</div>
+                    <div class="features">2, 3 BHK Apartments<br>Thane West, Thane</div>
+                    <div class="price">₹85 L - 1.25 Cr</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Sunshine Residency"
+                        alt="Sunshine Residency">
+                </div>
+                <div class="details">
+                    <h3>Sunshine Residency</h3>
+                    <div class="builder">by Sunshine Developers</div>
+                    <div class="features">1, 2 BHK Apartments<br>Kalyan, Beyond Thane</div>
+                    <div class="price">₹45 L - 75 L</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Green Meadows" alt="Green Meadows">
+                </div>
+                <div class="details">
+                    <h3>Green Meadows</h3>
+                    <div class="builder">by Green Builders</div>
+                    <div class="features">2, 3 BHK Villas<br>Panvel, Navi Mumbai</div>
+                    <div class="price">₹60 L - 1.1 Cr</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Skyline Towers" alt="Skyline Towers">
+                </div>
+                <div class="details">
+                    <h3>Skyline Towers</h3>
+                    <div class="builder">by Skyline Group</div>
+                    <div class="features">1, 2, 3 BHK Apartments<br>Mulund, Mumbai</div>
+                    <div class="price">₹99 L - 2.5 Cr</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Riviera Bliss" alt="Riviera Bliss">
+                </div>
+                <div class="details">
+                    <h3>Riviera Bliss</h3>
+                    <div class="builder">by Oceanic Builders</div>
+                    <div class="features">2, 3 BHK Apartments<br>Vasai, Mumbai</div>
+                    <div class="price">₹55 L - 95 L</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="Hilltop Residency"
+                        alt="Hilltop Residency">
+                </div>
+                <div class="details">
+                    <h3>Hilltop Residency</h3>
+                    <div class="builder">by Skyline Group</div>
+                    <div class="features">2, 3 BHK Apartments<br>Lonavala</div>
+                    <div class="price">₹78 L - 1.5 Cr</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="about-section">
+        <div class="about-text">
+            <h2>About Harsh Enterprises</h2>
+            <p>Harsh Enterprises is a leading real estate consultancy based in Thane, specializing in residential and
+                commercial property solutions. With over a decade of experience, we pride ourselves on connecting
+                clients to their dream properties with trust, transparency, and expertise.</p>
+            <p>Our team works with top developers to bring you verified listings, exclusive offers, and personalized
+                guidance throughout your property journey.</p>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="about-image">
+            <img src="Building.jpeg"
+                alt="About Harsh Enterprises">
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you! Whether you’re buying, selling, or investing — we’re here to help.</p>
+        <div class="contact-info">
+            <div><i class="fas fa-phone"></i>
+                <p>+91 93206 58734</p>
+            </div>
+            <div><i class="fas fa-envelope"></i>
+                <p>harshenterprises.realestate@gmail.com</p>
+            </div>
+            <div><i class="fas fa-map-marker-alt"></i>
+                <p>Thane, Maharashtra, India</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Harsh Enterprises. All Rights Reserved. | <a href="#">Harsh Enterprises</a></p>
+    </footer>
+</body>
+
 <script> window.chtlConfig = { chatbotId: "1139265912" } </script>
 <script async data-id="1139265912" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-<script>
-    const btn = document.getElementById("viewAllBtn");
-    const modal = document.getElementById("myModal");
-
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-</script>
-<body>
-<div class="topbar">
-  <div  class="logo1">
-    <img src="HE Logo.jpeg" alt="Website Logo">
-  </div>
-   <div class="text">
-    <h1>Harsh Enterprises</h1>
-    <div class="p">
-    <p>Trusted Real Estate Partners</p>
-    </div>
-</div>
-  <div class="right-info">
-    <a href="https://www.facebook.com/share/15KzAWXG4Lb/"><img src="facebook.apng"></a>
-    <a href="https://www.instagram.com/harshenterprises.7979?igsh=MW8wdmYxZTlxMDE1cQ=="><img src="instagram.apng"></a>
-    <a href="https://wa.me/9320658734"><i class="fab fa-whatsapp"></i><img src="whatsapp.apng"></a>
-    <a href="https://www.youtube.com/@HARSHENTERPRISES-z4y"><img src="youtube.apng"></a>
-    <a href="https://maps.app.goo.gl/BYBpLRZqZDM6XDKi6"><img src="goggle map.apng"></a>
-  </div>
-</div>
-    <header>
-       
-             <a href="#ready to move">READY TO MOVE </a>
-             <a href="# top highlighted">TOP HIGHLIGHTED </a>
-             <a href="#recommended">RECOMMENDED</a>
-             <a href="#trusted">TRUSTED</a>
-            <a href="#high demand">HIGH DEMAND</a>   
-        </nav>  
-    </header>
-   <section class="hero-section">
-  <h1>Welcome to Harsh Enterprises</h1>
-  <p><b>Your trusted business partner</b></p>
-  <h1>Find Your Dream Home</h1>
-  <p><b>Discover 63K+ Verified Properties In Thane With 7K+ New 
-    Listings Every Day</b>
-  </p>
-  <button class="my-button">Get Free Consultion</button>
-</section>
-   <section id="ready to move" class="t">
-    <h2>READY TO MOVE</h2>
-    Immediate possession available properties with all amenities and ready for occupancy 
-  <!-- Ready to Move Section -->
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="palm hils.jpg" alt="Palm Hills">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Palm Hills</h3>
-          <div class="builder">by Harsh Enterprises</div>
-          <div class="features">2, 3 BHK Row House Villas<br>Between Igatpuri and Nashik</div>
-          <div class="price">₹80 L - 98 L</div>
-          <div class="tags">
-            <span class="tag">Highway Touch</span>
-            <span class="tag">Vacation Rental Income</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="amber vastu.avif" alt="Ambar Vasati">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Ambar Vasatu</h3>
-          <div class="builder">by Ambar Vaastu</div>
-          <div class="features">1, 2, 3, 4 BHK Apartments<br>Badlapur East</div>
-          <div class="price">₹35.99 L - 84.99 L</div>
-          <div class="tags">
-            <span class="tag">10–14 Floor Buildings</span>
-            <span class="tag">Green Nature View</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Unimont Aurum.jfif" alt="Unimont Aurum">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Unimont Aurum</h3>
-          <div class="builder">by Unimont Group</div>
-          <div class="features">1, 2 BHK Apartments<br>Karjat</div>
-          <div class="price">₹22 L - 33 L</div>
-          <div class="tags">
-            <span class="tag">4 Towers OC Received</span>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-<section id="ready to move" class="t">
-   
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Shivshakti Prime" alt="Palm Hills">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Shivshakti Prime</h3>
-          <div class="builder">by Shivshakti Builders</div>
-          <div class="features">1,2,3,4BHK Apartments & Shops<br>2 mins from Badlapur Station</div>
-          <div class="price">₹35.99L - 84.99 L</div>
-          <div class="tags">
-            <span class="tag">Walking to Station</span>
-            <span class="tag">luxurious Lifestyle</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Mohan Willows" alt="Ambar Vasati">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Mohan Willows</h3>
-          <div class="builder">by Mohan Group</div>
-          <div class="features">1, 2BHK Apartments<br>Badlapur East</div>
-          <div class="price">₹28.62 L - 40.79 L</div>
-          <div class="tags">
-            <span class="tag">40,000 sqft Clubhouse </span>
-            <span class="tag">Tallest in Badlapur</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Tharwani Ariana" alt="Unimont Aurum">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Tharwani Ariana</h3>
-          <div class="builder">by Tharwani  Group</div>
-          <div class="features">1, 2 BHK Apartments<br>Badlapur West</div>
-          <div class="price">₹32 L - 45 L</div>
-          <div class="tags">
-            <span class="tag">16 Storey Towers</span>
-            <span class="tag">35+ Completed Project</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-</section>
-
-<!--Top Highlighted Project-->
-<section id=" top highlighted" class="t">
-    <h2>Top Highlighted Projects</h2>
-     Premium and exclusive property selections with unique features and amenities 
-  <!-- Ready to Move Section2 -->
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Luxury Towers" alt="Palm Hills">
-          <div class="status">Premium</div>
-        </div>
-        <div class="details">
-          <h3>Luxury Towers</h3>
-          <div class="builder">by Premium Developers</div>
-          <div class="features">3,4BHK Apartments<br>Powai,Mumbai</div>
-          <div class="price">₹2.5 Cr - 5 Cr</div>
-          
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Business Hub" alt="Ambar Vasati">
-          <div class="status">Commercial</div>
-        </div>
-        <div class="details">
-          <h3>Business Hub</h3>
-          <div class="builder">by Corporate Builders</div>
-          <div class="features">Commercial Spaces<br>Bandra Kurla Complex</div>
-          <div class="price">₹3 Cr - 8 cr</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Tech Park Residency" alt="Unimont Aurum">
-          <div class="status">IT Corridor</div>
-        </div>
-        <div class="details">
-          <h3>Tech Park Residency</h3>
-          <div class="builder">by IT Zone Devlopers</div>
-          <div class="features">2,3 BHK Apartments<br>Hinjewadi,pune</div>
-          <div class="price">₹99 L - 2.1 Cr</div>
-          
-        </div>
-      </div>
-    </div>
-</section>
-
-<!--Recommended Projects-->
-<section id="recommended" class="t">
-    <h2>Recommended Projects</h2>
-     Handpicked homes specially recommended for you by our expert team
-  <!-- Ready to Move Section3 -->
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Harsh Heights" alt="Palm Hills">
-        </div>
-        <div class="details">
-          <h3>Harsh Heights</h3>
-          <div class="builder">by Harsh Enterprises</div>
-          <div class="features">2,3BHK Apartments<br>Thane West,Thane</div>
-          <div class="price">₹85 L - 1.25 Cr</div>
-          
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Sunshine Residency" alt="Ambar Vasati">
-        </div>
-        <div class="details">
-          <h3>Sunshine Residency</h3>
-          <div class="builder">by Sunshine Devlopers</div>
-          <div class="features">1,2BHK Apartments<br>Kalyan,Beyond Thane</div>
-          <div class="price">₹45 L - 75 L</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Green Meadows" alt="Unimont Aurum">
-        </div>
-        <div class="details">
-          <h3>Green Meadows</h3>
-          <div class="builder">by Green Builders</div>
-          <div class="features">2,3 BHK Villas<br>Panvel,Navi Mumbai</div>
-          <div class="price">₹60 L - 1.1 Cr</div>  
-        </div>
-      </div>
-    </div>
-</section>
-<section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Skyline Towers" alt="Palm Hills">
-        </div>
-        <div class="details">
-          <h3>Skyline Towers</h3>
-          <div class="builder">by Skyline Group</div>
-          <div class="features">1,2,3BHK Apartments<br>Mulund,Mumbai</div>
-          <div class="price">₹99 L - 2.5 Cr</div>
-          
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Riviera Bliss" alt="Ambar Vasati">
-        </div>
-        <div class="details">
-          <h3>Riviera Bliss</h3>
-          <div class="builder">by Oceanic Builders</div>
-          <div class="features">2,3BHK Apartments<br>Vasai,Mumbai</div>
-          <div class="price">₹55 L - 95 L</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Hilltop Residency" alt="Unimont Aurum">
-        </div>
-        <div class="details">
-          <h3>Hilltop Residency</h3>
-          <div class="builder">by Hillstone Developers</div>
-          <div class="features">1,2,3 BHK Apartments<br>Lonavala,Pune</div>
-          <div class="price">₹40 L - 80 Cr</div>  
-        </div>
-      </div>
-    </div>
-</section>
-
-<!-- High-Demand Projects-->
-<section id="recommended" class="t">
-    <h2>High-Demand Projects</h2>
-     Leading projects in high demand with excellent investment potential
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Kartik Enclave" alt="Palm Hills">
-        </div>
-        <div class="details">
-          <h3>Kartik Enclave</h3>
-          <div class="builder">by Shivay Developer</div>
-          <div class="features">1, 2 BHK Apartments<br>Bhiwandi, Beyond Thane</div>
-          <div class="price">₹41.42 L - 60.52 L</div>
-          
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Shree Sai Complex" alt="Ambar Vasati">
-        </div>
-        <div class="details">
-          <h3>Shree Sai Complex</h3>
-          <div class="builder">by Sai Developers</div>
-          <div class="features">1, 2 BHK Flats<br>Nallasopara, Mumbai</div>
-          <div class="price">₹32 L - 55 L</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Omkar Residency" alt="Unimont Aurum">
-        </div>
-        <div class="details">
-          <h3>Omkar Residency</h3>
-          <div class="builder">by Omkar Group</div>
-          <div class="features">2,3 BHK Apartments<br>Virar, Mumbai</div>
-          <div class="price">₹38 L - 72 L</div>  
-        </div>
-      </div>
-    </div>
-</section>
-<section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Shiv Shakti Heights" alt="Palm Hills">
-        </div>
-        <div class="details">
-          <h3>Shiv Shakti Heights</h3>
-          <div class="builder">by Shakti Developers</div>
-          <div class="features">1, 2 BHK Flats<br>Dombivli, Thane</div>
-          <div class="price">₹35 L - 58 L</div>
-          
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Navkar Residency" alt="Ambar Vasati">
-        </div>
-        <div class="details">
-          <h3>Navkar Residency</h3>
-          <div class="builder">by Navkar Builders</div>
-          <div class="features">2, 3 BHK Apartments<br>Boisar, Palghar</div>
-          <div class="price">₹25 L - 45 L</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Dream City" alt="Unimont Aurum">
-        </div>
-        <div class="details">
-          <h3>Dream City</h3>
-          <div class="builder">by Dream Homes</div>
-          <div class="features">1, 2 BHK Flats<br>Badlapur, Thane</div>
-          <div class="price">₹28 L - 52 L</div>  
-        </div>
-      </div>
-    </div>
-</section>
-<section id="ready to move" class="t">
-    <h2>Popular Owner Properties</h2>
-  <!-- Ready to Move Section -->
-  <section class="section">
-    <div class="section-header">
-      <a href="#ready to move" class="view-all">View All →</a>
-    </div>
-
-    <div class="property-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="palm hils.jpg" alt="Palm Hills">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Palm Hills</h3>
-          <div class="builder">by Harsh Enterprises</div>
-          <div class="features">2, 3 BHK Row House Villas<br>Between Igatpuri and Nashik</div>
-          <div class="price">₹80 L - 98 L</div>
-          <div class="tags">
-            <span class="tag">Highway Touch</span>
-            <span class="tag">Vacation Rental Income</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="amber vastu.avif" alt="Ambar Vasati">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Ambar Vasatu</h3>
-          <div class="builder">by Ambar Vaastu</div>
-          <div class="features">1, 2, 3, 4 BHK Apartments<br>Badlapur East</div>
-          <div class="price">₹35.99 L - 84.99 L</div>
-          <div class="tags">
-            <span class="tag">10–14 Floor Buildings</span>
-            <span class="tag">Green Nature View</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="image-container">
-          <img src="Unimont Aurum.jfif" alt="Unimont Aurum">
-          <div class="status">Ready to Move</div>
-        </div>
-        <div class="details">
-          <h3>Unimont Aurum</h3>
-          <div class="builder">by Unimont Group</div>
-          <div class="features">1, 2 BHK Apartments<br>Karjat</div>
-          <div class="price">₹22 L - 33 L</div>
-          <div class="tags">
-            <span class="tag">4 Towers OC Received</span>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-<section class="about-section">
-    <div class="about-text">
-      <h2>About Our Company</h2>
-      <p>
-       At Harsh Enterprises, we believe in building more than just spaces — we build trust, quality, and lasting relationships. With a commitment to excellence and innovation, we specialize in residential and commercial property solutions that redefine comfort and style.
-
-Since our inception, our goal has been to deliver properties that blend modern design with timeless value. From budget-friendly homes to premium projects, Harsh Enterprises stands for reliability, transparency, and craftsmanship that speaks for itself.
-      </p>
-      <a href="#">Learn More</a>
-    </div>
-
-    <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800" alt="About Us Image">
-    </div>
-  </section>
-
-
+</html>

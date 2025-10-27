@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Enterprises</title>
+<style>
+  /* Top bar*/
+    .topbar {
+  background:white; /* green background */
+  color:black;
+  font-size: 25px;
+  padding:10px 16px;
+  display: flex;                 /* left-right layout */
+  justify-content: space-between;/* left info & right info opposite sides */
+    height: 45px;
+    line-height: 20px;
+    overflow: hidden;
+    position: sticky;
+   
+}
+.topbar .logo1 img{
+  height: 120%;
+  width: 120%;
+  padding-right:50%;
+  text-align:center;
+  padding-top:0%;
+  }
+  .topbar .text h1{
+    font-size: 100%;
+    margin: 0;
+    padding-top: 5%;
+    
+
+  }
+    .topbar .text p{
+
+    font-size: 14px;
+    margin: 0%;
+    text-align: center;
+  }
+.topbar .right-info a {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  color:  rgb(27, 27, 27);
+  text-decoration: none;                                                                                                                                                                                                                                                                                                                                                                            
+  margin-left: 20px; /* gap between links */
+  text-align: center;
+  height:10%;
+}
+.topbar .right-info a:hover {                                                           
+  text-decoration: underline; /* hover effect */
+  text-align: center;
+  padding: 1%;
+}  
+/* Header */
+ header {
+            background-color:rgb(248, 253, 253);
+            color: rgb(3, 3, 3);
+            text-decoration:none;
+            /*padding: 0px 5px;*/
+            text-align: center;       
+            padding:5px;
+            display: flex;
+           /* justify-content: space-between;*/
+            align-items: center;
+            position:relative;
+            gap:5%;
+           padding-left: 20%;
+           position: sticky;
+    
+        }
+        
+/* Section first*/
+.hero-section {
+  background-color:#030303;
+  background-image: url('HE Logo.jpeg');  /* तुझ्या image चं नाव */
+  background-size: 600px;      /* पूर्ण section भरून दिसेल */
+  background-position: center; /* image center ला येईल */
+  background-repeat: no-repeat;/* repeat होणार नाही */
+  height: 600px;               /* section ची उंची */
+  display: flex;               /* text center करायला */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:rgb(247, 243, 243);                /* text दिसायला white */
+  text-align: center;
+  font-size:25px;
+}
+.my-section{
+  padding: 50px;
+  text-align: center;
+  background-color: #f3f0f0;
+}
+.my-button{
+background-color: #f4f7fa;
+color:#111111;
+border:none;
+padding: 12px 25 px;
+font-size: 16px;
+border-radius: 8px;
+cursor:pointer;
+transition: background-color 0.3s,transform 2.2s;
+}
+.my-button:hover{
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+/*section part 2*/
+.t {
+         padding: 60px 20px;
+            background: #f3f0f0;
+             text-align: center;
+        }
+
+    .section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    /* Section Header */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+    }
+
+    .section-header p {
+      font-size: 14px;
+      color: #bbb;
+      margin: 5px 0 0;
+    }
+
+    .view-all {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .view-all:hover {
+      color: #60a5fa;
+    }
+
+    /* Property Cards */
+    .property-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-container {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .status {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #22c55e;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .details {
+      padding: 15px 20px;
+    }
+
+    .details h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .builder {
+      font-size: 13px;
+      color: #3b82f6;
+      margin-top: 3px;
+    }
+
+    .features {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #e5e7eb;
+    }
+
+    .tags {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #2d2d2d;
+      color: #bbb;
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #333;
+    }
+
+    /* Divider between sections */
+    .divider {
+      height: 1px;
+      background: #2a2a2a;
+      margin: 50px 0 0;
+    }
+  /* Cards row */
+  .cards{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:var(--gap);
+    align-items:start;
+  }
+
+/*About us*/
+
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h2 {
+      font-size: 32px;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .about-text a {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .about-text a:hover {
+      background-color: #0056b3;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: right;
+      min-width: 300px;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-image {
+        text-align: center;
+      }
+    }
+</style>
+</head>
+<script> window.chtlConfig = { chatbotId: "1139265912" } </script>
+<script async data-id="1139265912" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+<script>
+    const btn = document.getElementById("viewAllBtn");
+    const modal = document.getElementById("myModal");
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+</script>
+<body>
+<div class="topbar">
+  <div  class="logo1">
+    <img src="HE Logo.jpeg" alt="Website Logo">
+  </div>
+   <div class="text">
+    <h1>Harsh Enterprises</h1>
+    <div class="p">
+    <p>Trusted Real Estate Partners</p>
+    </div>
+</div>
+  <div class="right-info">
+    <a href="https://www.facebook.com/share/15KzAWXG4Lb/"><img src="facebook.apng"></a>
+    <a href="https://www.instagram.com/harshenterprises.7979?igsh=MW8wdmYxZTlxMDE1cQ=="><img src="instagram.apng"></a>
+    <a href="https://wa.me/9320658734"><i class="fab fa-whatsapp"></i><img src="whatsapp.apng"></a>
+    <a href="https://www.youtube.com/@HARSHENTERPRISES-z4y"><img src="youtube.apng"></a>
+    <a href="https://maps.app.goo.gl/BYBpLRZqZDM6XDKi6"><img src="goggle map.apng"></a>
+  </div>
+</div>
+    <header>
+       
+             <a href="#ready to move">READY TO MOVE </a>
+             <a href="# top highlighted">TOP HIGHLIGHTED </a>
+             <a href="#recommended">RECOMMENDED</a>
+             <a href="#trusted">TRUSTED</a>
+            <a href="#high demand">HIGH DEMAND</a>   
+        </nav>  
+    </header>
+   <section class="hero-section">
+  <h1>Welcome to Harsh Enterprises</h1>
+  <p><b>Your trusted business partner</b></p>
+  <h1>Find Your Dream Home</h1>
+  <p><b>Discover 63K+ Verified Properties In Thane With 7K+ New 
+    Listings Every Day</b>
+  </p>
+  <button class="my-button">Get Free Consultion</button>
+</section>
+   <section id="ready to move" class="t">
+    <h2>READY TO MOVE</h2>
+    Immediate possession available properties with all amenities and ready for occupancy 
+  <!-- Ready to Move Section -->
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="palm hils.jpg" alt="Palm Hills">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Palm Hills</h3>
+          <div class="builder">by Harsh Enterprises</div>
+          <div class="features">2, 3 BHK Row House Villas<br>Between Igatpuri and Nashik</div>
+          <div class="price">₹80 L - 98 L</div>
+          <div class="tags">
+            <span class="tag">Highway Touch</span>
+            <span class="tag">Vacation Rental Income</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="amber vastu.avif" alt="Ambar Vasati">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Ambar Vasatu</h3>
+          <div class="builder">by Ambar Vaastu</div>
+          <div class="features">1, 2, 3, 4 BHK Apartments<br>Badlapur East</div>
+          <div class="price">₹35.99 L - 84.99 L</div>
+          <div class="tags">
+            <span class="tag">10–14 Floor Buildings</span>
+            <span class="tag">Green Nature View</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Unimont Aurum.jfif" alt="Unimont Aurum">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Unimont Aurum</h3>
+          <div class="builder">by Unimont Group</div>
+          <div class="features">1, 2 BHK Apartments<br>Karjat</div>
+          <div class="price">₹22 L - 33 L</div>
+          <div class="tags">
+            <span class="tag">4 Towers OC Received</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section id="ready to move" class="t">
+   
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Shivshakti Prime" alt="Palm Hills">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Shivshakti Prime</h3>
+          <div class="builder">by Shivshakti Builders</div>
+          <div class="features">1,2,3,4BHK Apartments & Shops<br>2 mins from Badlapur Station</div>
+          <div class="price">₹35.99L - 84.99 L</div>
+          <div class="tags">
+            <span class="tag">Walking to Station</span>
+            <span class="tag">luxurious Lifestyle</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Mohan Willows" alt="Ambar Vasati">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Mohan Willows</h3>
+          <div class="builder">by Mohan Group</div>
+          <div class="features">1, 2BHK Apartments<br>Badlapur East</div>
+          <div class="price">₹28.62 L - 40.79 L</div>
+          <div class="tags">
+            <span class="tag">40,000 sqft Clubhouse </span>
+            <span class="tag">Tallest in Badlapur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Tharwani Ariana" alt="Unimont Aurum">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Tharwani Ariana</h3>
+          <div class="builder">by Tharwani  Group</div>
+          <div class="features">1, 2 BHK Apartments<br>Badlapur West</div>
+          <div class="price">₹32 L - 45 L</div>
+          <div class="tags">
+            <span class="tag">16 Storey Towers</span>
+            <span class="tag">35+ Completed Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<!--Top Highlighted Project-->
+<section id=" top highlighted" class="t">
+    <h2>Top Highlighted Projects</h2>
+     Premium and exclusive property selections with unique features and amenities 
+  <!-- Ready to Move Section2 -->
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Luxury Towers" alt="Palm Hills">
+          <div class="status">Premium</div>
+        </div>
+        <div class="details">
+          <h3>Luxury Towers</h3>
+          <div class="builder">by Premium Developers</div>
+          <div class="features">3,4BHK Apartments<br>Powai,Mumbai</div>
+          <div class="price">₹2.5 Cr - 5 Cr</div>
+          
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Business Hub" alt="Ambar Vasati">
+          <div class="status">Commercial</div>
+        </div>
+        <div class="details">
+          <h3>Business Hub</h3>
+          <div class="builder">by Corporate Builders</div>
+          <div class="features">Commercial Spaces<br>Bandra Kurla Complex</div>
+          <div class="price">₹3 Cr - 8 cr</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Tech Park Residency" alt="Unimont Aurum">
+          <div class="status">IT Corridor</div>
+        </div>
+        <div class="details">
+          <h3>Tech Park Residency</h3>
+          <div class="builder">by IT Zone Devlopers</div>
+          <div class="features">2,3 BHK Apartments<br>Hinjewadi,pune</div>
+          <div class="price">₹99 L - 2.1 Cr</div>
+          
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--Recommended Projects-->
+<section id="recommended" class="t">
+    <h2>Recommended Projects</h2>
+     Handpicked homes specially recommended for you by our expert team
+  <!-- Ready to Move Section3 -->
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Harsh Heights" alt="Palm Hills">
+        </div>
+        <div class="details">
+          <h3>Harsh Heights</h3>
+          <div class="builder">by Harsh Enterprises</div>
+          <div class="features">2,3BHK Apartments<br>Thane West,Thane</div>
+          <div class="price">₹85 L - 1.25 Cr</div>
+          
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Sunshine Residency" alt="Ambar Vasati">
+        </div>
+        <div class="details">
+          <h3>Sunshine Residency</h3>
+          <div class="builder">by Sunshine Devlopers</div>
+          <div class="features">1,2BHK Apartments<br>Kalyan,Beyond Thane</div>
+          <div class="price">₹45 L - 75 L</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Green Meadows" alt="Unimont Aurum">
+        </div>
+        <div class="details">
+          <h3>Green Meadows</h3>
+          <div class="builder">by Green Builders</div>
+          <div class="features">2,3 BHK Villas<br>Panvel,Navi Mumbai</div>
+          <div class="price">₹60 L - 1.1 Cr</div>  
+        </div>
+      </div>
+    </div>
+</section>
+<section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Skyline Towers" alt="Palm Hills">
+        </div>
+        <div class="details">
+          <h3>Skyline Towers</h3>
+          <div class="builder">by Skyline Group</div>
+          <div class="features">1,2,3BHK Apartments<br>Mulund,Mumbai</div>
+          <div class="price">₹99 L - 2.5 Cr</div>
+          
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Riviera Bliss" alt="Ambar Vasati">
+        </div>
+        <div class="details">
+          <h3>Riviera Bliss</h3>
+          <div class="builder">by Oceanic Builders</div>
+          <div class="features">2,3BHK Apartments<br>Vasai,Mumbai</div>
+          <div class="price">₹55 L - 95 L</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Hilltop Residency" alt="Unimont Aurum">
+        </div>
+        <div class="details">
+          <h3>Hilltop Residency</h3>
+          <div class="builder">by Hillstone Developers</div>
+          <div class="features">1,2,3 BHK Apartments<br>Lonavala,Pune</div>
+          <div class="price">₹40 L - 80 Cr</div>  
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- High-Demand Projects-->
+<section id="recommended" class="t">
+    <h2>High-Demand Projects</h2>
+     Leading projects in high demand with excellent investment potential
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Kartik Enclave" alt="Palm Hills">
+        </div>
+        <div class="details">
+          <h3>Kartik Enclave</h3>
+          <div class="builder">by Shivay Developer</div>
+          <div class="features">1, 2 BHK Apartments<br>Bhiwandi, Beyond Thane</div>
+          <div class="price">₹41.42 L - 60.52 L</div>
+          
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Shree Sai Complex" alt="Ambar Vasati">
+        </div>
+        <div class="details">
+          <h3>Shree Sai Complex</h3>
+          <div class="builder">by Sai Developers</div>
+          <div class="features">1, 2 BHK Flats<br>Nallasopara, Mumbai</div>
+          <div class="price">₹32 L - 55 L</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Omkar Residency" alt="Unimont Aurum">
+        </div>
+        <div class="details">
+          <h3>Omkar Residency</h3>
+          <div class="builder">by Omkar Group</div>
+          <div class="features">2,3 BHK Apartments<br>Virar, Mumbai</div>
+          <div class="price">₹38 L - 72 L</div>  
+        </div>
+      </div>
+    </div>
+</section>
+<section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Shiv Shakti Heights" alt="Palm Hills">
+        </div>
+        <div class="details">
+          <h3>Shiv Shakti Heights</h3>
+          <div class="builder">by Shakti Developers</div>
+          <div class="features">1, 2 BHK Flats<br>Dombivli, Thane</div>
+          <div class="price">₹35 L - 58 L</div>
+          
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Navkar Residency" alt="Ambar Vasati">
+        </div>
+        <div class="details">
+          <h3>Navkar Residency</h3>
+          <div class="builder">by Navkar Builders</div>
+          <div class="features">2, 3 BHK Apartments<br>Boisar, Palghar</div>
+          <div class="price">₹25 L - 45 L</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Dream City" alt="Unimont Aurum">
+        </div>
+        <div class="details">
+          <h3>Dream City</h3>
+          <div class="builder">by Dream Homes</div>
+          <div class="features">1, 2 BHK Flats<br>Badlapur, Thane</div>
+          <div class="price">₹28 L - 52 L</div>  
+        </div>
+      </div>
+    </div>
+</section>
+<section id="ready to move" class="t">
+    <h2>Popular Owner Properties</h2>
+  <!-- Ready to Move Section -->
+  <section class="section">
+    <div class="section-header">
+      <a href="#ready to move" class="view-all">View All →</a>
+    </div>
+
+    <div class="property-list">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="palm hils.jpg" alt="Palm Hills">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Palm Hills</h3>
+          <div class="builder">by Harsh Enterprises</div>
+          <div class="features">2, 3 BHK Row House Villas<br>Between Igatpuri and Nashik</div>
+          <div class="price">₹80 L - 98 L</div>
+          <div class="tags">
+            <span class="tag">Highway Touch</span>
+            <span class="tag">Vacation Rental Income</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="amber vastu.avif" alt="Ambar Vasati">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Ambar Vasatu</h3>
+          <div class="builder">by Ambar Vaastu</div>
+          <div class="features">1, 2, 3, 4 BHK Apartments<br>Badlapur East</div>
+          <div class="price">₹35.99 L - 84.99 L</div>
+          <div class="tags">
+            <span class="tag">10–14 Floor Buildings</span>
+            <span class="tag">Green Nature View</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="image-container">
+          <img src="Unimont Aurum.jfif" alt="Unimont Aurum">
+          <div class="status">Ready to Move</div>
+        </div>
+        <div class="details">
+          <h3>Unimont Aurum</h3>
+          <div class="builder">by Unimont Group</div>
+          <div class="features">1, 2 BHK Apartments<br>Karjat</div>
+          <div class="price">₹22 L - 33 L</div>
+          <div class="tags">
+            <span class="tag">4 Towers OC Received</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="about-section">
+    <div class="about-text">
+      <h2>About Our Company</h2>
+      <p>
+       At Harsh Enterprises, we believe in building more than just spaces — we build trust, quality, and lasting relationships. With a commitment to excellence and innovation, we specialize in residential and commercial property solutions that redefine comfort and style.
+
+Since our inception, our goal has been to deliver properties that blend modern design with timeless value. From budget-friendly homes to premium projects, Harsh Enterprises stands for reliability, transparency, and craftsmanship that speaks for itself.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800" alt="About Us Image">
+    </div>
+  </section>
+
+
